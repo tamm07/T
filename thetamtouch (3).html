@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tam Touch ✦ Bridal · Editorial · Fantasy MUA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --paper:#FDF8F2;--paper2:#FAF3EA;--paper3:#F5ECE0;
+  --blush:#F2C4CE;--blush-d:#E8A0B0;--blush-p:#FAE8EC;
+  --lav:#D4C5E8;--lav-d:#B8A3D4;--lav-p:#EDE8F5;
+  --mint:#C5E0D4;--mint-d:#9ECAB5;
+  --butter:#F5E4A8;--butter-d:#E8CC70;
+  --peach:#F5CEBA;
+  --ink:#2C1A0E;--ink2:#4A3728;--ink3:#7A6252;
+  --red:#D94040;
+  --fd:'Playfair Display',serif;
+  --fh:'Caveat',cursive;
+  --fb:'DM Sans',sans-serif;
+  --fs:'Libre Baskerville',serif;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--fb);overflow-x:hidden;cursor:none;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(180,150,120,0.06) 27px,rgba(180,150,120,0.06) 28px);}
+
+/* CURSOR */
+.cdot{position:fixed;z-index:9999;pointer-events:none;width:8px;height:8px;background:var(--red);border-radius:50%;transform:translate(-50%,-50%);}
+.cring{position:fixed;z-index:9998;pointer-events:none;width:32px;height:32px;border:1.5px solid var(--blush-d);border-radius:50%;transform:translate(-50%,-50%);transition:all .15s ease-out;}
+.cring.hov{width:48px;height:48px;border-color:var(--lav-d);background:rgba(212,197,232,.08);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.1rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(253,248,242,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1.5px solid rgba(242,196,206,.35);transition:all .4s;}
+.nav-logo{font-family:var(--fh);font-size:1.6rem;font-weight:700;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--red);font-size:.7em;vertical-align:super;margin-left:2px;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-family:var(--fb);font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);text-decoration:none;position:relative;padding-bottom:2px;transition:color .3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--blush-d);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.34,1.56,.64,1);}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-book{font-family:var(--fh);font-size:1rem;font-weight:600;color:white;background:var(--ink);padding:.55rem 1.4rem;border-radius:30px;text-decoration:none;transition:all .3s;}
+.nav-book:hover{background:var(--red);transform:translateY(-1px) rotate(-1deg);}
+
+/* HERO */
+#hero{position:relative;z-index:1;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:7rem 4rem 4rem;gap:3rem;overflow:hidden;}
+.blob{position:absolute;border-radius:60% 40% 55% 45%/50% 60% 40% 50%;filter:blur(70px);opacity:.42;pointer-events:none;}
+.b1{width:520px;height:520px;background:var(--blush);top:-120px;right:-100px;animation:bmorph 13s ease-in-out infinite;}
+.b2{width:420px;height:380px;background:var(--lav);bottom:-80px;left:-120px;animation:bmorph 16s ease-in-out infinite reverse;}
+.b3{width:260px;height:260px;background:var(--mint);top:42%;right:28%;animation:bmorph 11s ease-in-out infinite 2s;}
+.b4{width:180px;height:180px;background:var(--butter);top:22%;left:38%;animation:bmorph 9s ease-in-out infinite 1s;}
+@keyframes bmorph{0%,100%{border-radius:60% 40% 55% 45%/50% 60% 40% 50%;transform:translate(0,0) scale(1);}33%{border-radius:40% 60% 45% 55%/60% 40% 60% 40%;transform:translate(14px,-10px) scale(1.04);}66%{border-radius:55% 45% 40% 60%/40% 55% 50% 60%;transform:translate(-10px,14px) scale(.97);}}
+
+.flob{position:absolute;pointer-events:none;z-index:3;animation:fbob 4s ease-in-out infinite;}
+@keyframes fbob{0%,100%{transform:translateY(0) rotate(var(--r,0deg));}50%{transform:translateY(-9px) rotate(calc(var(--r,0deg) + 3deg));}}
+.fb1{top:14%;right:51%;font-size:1.4rem;--r:-10deg;animation-delay:0s;}
+.fb2{top:58%;left:51%;font-size:.9rem;--r:8deg;animation-delay:1.5s;}
+.fb3{top:7%;right:2%;font-size:2.4rem;--r:5deg;animation-delay:.5s;}
+.fb4{bottom:18%;right:4%;font-size:1.7rem;--r:-5deg;animation-delay:2s;}
+.fb5{bottom:9%;left:1%;font-size:1.1rem;--r:15deg;animation-delay:1s;}
+.fb6{top:32%;right:1%;font-size:.9rem;--r:-8deg;animation-delay:2.5s;}
+
+.hero-l{position:relative;z-index:2;}
+.hero-stix{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap;}
+.stix{display:inline-flex;align-items:center;font-family:var(--fh);font-size:.85rem;font-weight:600;padding:5px 14px;border-radius:20px;}
+.sx-pink{background:var(--blush);color:var(--ink2);}
+.sx-lav{background:var(--lav);color:var(--ink2);}
+.sx-mint{background:var(--mint);color:var(--ink2);}
+.sx-but{background:var(--butter);color:var(--ink2);}
+.washi{display:inline-block;font-family:var(--fh);font-size:.82rem;padding:4px 14px;background:rgba(245,228,168,.65);color:var(--ink2);border-radius:2px;transform:rotate(-1.5deg);position:relative;}
+
+.hero-note{font-family:var(--fh);font-size:1.35rem;font-weight:600;color:var(--red);transform:rotate(-2deg);display:inline-block;margin-bottom:.7rem;}
+.hero-note::before{content:'→ ';}
+
+.hero-h1{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;line-height:1.06;color:var(--ink);margin-bottom:1rem;}
+.hero-h1 em{font-style:italic;color:var(--red);position:relative;display:inline-block;}
+.hero-h1 em::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:3px;background:var(--blush-d);border-radius:2px;animation:udraw 1s .8s both;transform-origin:left;}
+@keyframes udraw{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+
+.hero-body{font-family:var(--fb);font-size:.97rem;font-weight:300;color:var(--ink2);line-height:1.9;max-width:46ch;margin-bottom:2rem;}
+.hero-ctas{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;}
+.bpd{font-family:var(--fb);font-size:.73rem;font-weight:500;letter-spacing:.1em;color:white;background:var(--ink);padding:.85rem 2rem;border-radius:50px;text-decoration:none;transition:all .35s cubic-bezier(.34,1.56,.64,1);display:inline-flex;align-items:center;gap:7px;}
+.bpd:hover{background:var(--red);transform:translateY(-3px) scale(1.02);}
+.bpo{font-family:var(--fb);font-size:.73rem;font-weight:500;letter-spacing:.1em;color:var(--ink);border:1.5px solid var(--blush-d);padding:.85rem 2rem;border-radius:50px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px;}
+.bpo:hover{background:var(--blush-p);border-color:var(--ink);transform:translateY(-2px);}
+
+.hero-r{position:relative;z-index:2;display:flex;flex-direction:column;gap:1rem;}
+
+/* CLIPBOARD */
+.cb{background:var(--paper2);border:1.5px solid rgba(180,150,120,.22);border-radius:6px;box-shadow:3px 4px 18px rgba(44,26,14,.08);position:relative;padding:11px;transition:transform .45s cubic-bezier(.34,1.56,.64,1),box-shadow .45s;}
+.cb:hover{transform:translateY(-5px) rotate(.3deg);box-shadow:5px 12px 32px rgba(44,26,14,.13);}
+.cb-clip{position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:30px;height:18px;background:var(--ink2);border-radius:3px 3px 0 0;}
+.cb-clip::after{content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:16px;height:5px;background:var(--paper3);border-radius:2px;}
+.cb-img{border-radius:3px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.cb-lbl{font-family:var(--fh);font-size:.95rem;color:var(--ink2);text-align:center;opacity:.45;padding:.8rem;line-height:1.6;}
+.cb-cap{font-family:var(--fh);font-size:.9rem;color:var(--ink2);padding:7px 4px 2px;text-align:center;}
+.mini2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+
+/* MARQUEE */
+.mq-wrap{position:relative;z-index:1;background:var(--ink);padding:.9rem 0;overflow:hidden;transform:rotate(-1deg) scaleX(1.02);margin:1rem -10px;}
+.mq-track{display:flex;gap:2.5rem;animation:mqscroll 25s linear infinite;white-space:nowrap;width:max-content;}
+.mq-track:hover{animation-play-state:paused;}
+@keyframes mqscroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.mq-item{font-family:var(--fh);font-size:1.05rem;color:var(--paper);display:flex;align-items:center;gap:.9rem;white-space:nowrap;}
+.mq-gem{width:5px;height:5px;background:var(--blush);transform:rotate(45deg);display:inline-block;flex-shrink:0;}
+
+/* SHARED SECTION */
+.sw{position:relative;z-index:1;padding:6rem 4rem;max-width:1300px;margin:0 auto;}
+.stag{display:inline-flex;align-items:center;gap:7px;font-family:var(--fh);font-size:.95rem;font-weight:600;color:var(--red);margin-bottom:.7rem;}
+.stag::before{content:'→';}
+.sh{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:.5rem;}
+.sh em{font-style:italic;color:var(--ink2);}
+.ssub{font-family:var(--fb);font-size:.93rem;font-weight:300;color:var(--ink3);line-height:1.8;max-width:55ch;}
+
+/* SERVICES */
+#services{background:var(--paper2);}
+.svc-wrap{max-width:1300px;margin:0 auto;padding:6rem 4rem;position:relative;z-index:1;}
+.svc-hdr{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.5rem;}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;}
+.sc{background:var(--paper);border:1.5px solid rgba(180,150,120,.17);border-radius:18px;padding:2.5rem;position:relative;overflow:hidden;transition:all .45s cubic-bezier(.34,1.56,.64,1);cursor:default;}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:18px 18px 0 0;}
+.sc.br::before{background:linear-gradient(90deg,var(--blush),var(--blush-d));}
+.sc.ed::before{background:linear-gradient(90deg,var(--lav),var(--lav-d));}
+.sc.ev::before{background:linear-gradient(90deg,var(--mint),var(--mint-d));}
+.sc.sf::before{background:linear-gradient(90deg,var(--butter),var(--butter-d));}
+.sc:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(44,26,14,.1);}
+.sc-ico{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.4rem;}
+.sc.br .sc-ico{background:var(--blush-p);}
+.sc.ed .sc-ico{background:var(--lav-p);}
+.sc.ev .sc-ico{background:rgba(197,224,212,.38);}
+.sc.sf .sc-ico{background:rgba(245,228,168,.38);}
+.sc-name{font-family:var(--fd);font-size:1.3rem;font-weight:500;color:var(--ink);margin-bottom:.35rem;}
+.sc-wsp{font-family:var(--fh);font-size:.95rem;color:var(--red);margin-bottom:1rem;font-weight:500;}
+.sc-desc{font-size:.86rem;font-weight:300;color:var(--ink2);line-height:1.8;margin-bottom:1.4rem;}
+.sc-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.4rem;}
+.sc-pill{font-family:var(--fb);font-size:.62rem;font-weight:500;letter-spacing:.07em;padding:4px 11px;border-radius:20px;border:1px solid rgba(180,150,120,.22);color:var(--ink2);background:var(--paper2);}
+.sc-lnk{font-family:var(--fh);font-size:.95rem;font-weight:600;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:5px;border-bottom:2px dashed rgba(180,150,120,.38);padding-bottom:2px;transition:all .3s;}
+.sc-lnk:hover{color:var(--red);border-color:var(--red);gap:9px;}
+.sc-nbg{position:absolute;bottom:-12px;right:1.5rem;font-family:var(--fd);font-size:6rem;font-style:italic;color:rgba(44,26,14,.035);line-height:1;pointer-events:none;}
+
+/* ABOUT */
+#about{position:relative;overflow:hidden;}
+#about .pl{position:absolute;inset:0;z-index:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 31px,rgba(180,150,120,.055) 31px,rgba(180,150,120,.055) 32px);pointer-events:none;}
+.abg{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.aph{position:relative;}
+.amph{aspect-ratio:3/4;background:linear-gradient(145deg,var(--blush-p),var(--lav-p),var(--mint));border-radius:12px;border:1.5px solid rgba(180,150,120,.18);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:6px 8px 32px rgba(44,26,14,.09);}
+.amph::before{content:'';position:absolute;inset:10px;border:1px dashed rgba(180,150,120,.18);border-radius:8px;pointer-events:none;}
+.pph{text-align:center;font-family:var(--fh);font-size:.95rem;color:var(--ink3);opacity:.55;line-height:2.2;}
+.afc{position:absolute;background:var(--paper);border:1.5px solid rgba(180,150,120,.18);border-radius:11px;padding:.9rem 1.1rem;box-shadow:3px 4px 14px rgba(44,26,14,.07);font-family:var(--fh);}
+.afc1{top:-18px;left:-18px;font-size:.9rem;color:var(--ink2);transform:rotate(-3deg);background:var(--butter);}
+.afc2{bottom:-14px;right:-14px;transform:rotate(2.5deg);text-align:center;}
+.afc2 .bn{font-family:var(--fd);font-size:1.9rem;color:var(--red);line-height:1;}
+.afc2 .bl{font-size:.72rem;color:var(--ink2);}
+.abq{font-family:var(--fs);font-size:1.25rem;font-style:italic;color:var(--ink2);line-height:1.75;padding-left:1.1rem;border-left:3px solid var(--blush-d);margin-bottom:1.8rem;}
+.ab{font-size:.93rem;font-weight:300;color:var(--ink2);line-height:1.9;margin-bottom:1.5rem;}
+.atags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.2rem;}
+.atag{font-family:var(--fh);font-size:.87rem;font-weight:600;padding:5px 15px;border-radius:20px;}
+.atag:nth-child(1){background:var(--blush-p);border:1px solid var(--blush);}
+.atag:nth-child(2){background:var(--lav-p);border:1px solid var(--lav);}
+.atag:nth-child(3){background:rgba(197,224,212,.38);border:1px solid var(--mint);}
+.atag:nth-child(4){background:rgba(245,228,168,.38);border:1px solid var(--butter);}
+.atag:nth-child(5){background:var(--paper3);border:1px dashed rgba(180,150,120,.35);}
+.asr{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.asts{text-align:center;padding:1.1rem;background:var(--paper2);border-radius:11px;border:1px solid rgba(180,150,120,.13);}
+.sbn{font-family:var(--fd);font-size:1.7rem;font-style:italic;color:var(--ink);display:block;line-height:1;margin-bottom:3px;}
+.ssn{font-family:var(--fb);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);}
+
+/* PORTFOLIO */
+#portfolio{background:var(--paper3);}
+.pf-w{max-width:1300px;margin:0 auto;padding:6rem 4rem;position:relative;z-index:1;}
+.pf-top{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:2rem;margin-bottom:2.5rem;}
+.pf-frow{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;}
+.pf-btn{font-family:var(--fh);font-size:.88rem;font-weight:600;padding:5px 17px;border-radius:20px;border:1.5px solid rgba(180,150,120,.22);background:var(--paper);color:var(--ink2);cursor:none;transition:all .3s;}
+.pf-btn.on,.pf-btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.pb{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:175px;gap:1.1rem;}
+.pi{position:relative;border-radius:10px;overflow:visible;transition:all .45s cubic-bezier(.34,1.56,.64,1);}
+.pi:hover{z-index:10;transform:scale(1.04) rotate(.5deg);}
+.pi.s2{grid-column:span 2;}
+.pi.r2{grid-row:span 2;}
+.pifr{position:relative;width:100%;height:100%;background:var(--paper2);border:1.5px solid rgba(180,150,120,.18);border-radius:10px;overflow:hidden;box-shadow:2px 3px 12px rgba(44,26,14,.07);}
+.piclip{position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:22px;height:14px;background:var(--ink2);border-radius:2px 2px 0 0;z-index:2;}
+.piclip::after{content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:13px;height:4px;background:var(--paper3);border-radius:2px;}
+.piin{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;transition:transform .6s ease;}
+.pi:hover .piin{transform:scale(1.05);}
+.pilbl{font-family:var(--fh);font-size:clamp(.9rem,2vw,1.6rem);font-weight:600;color:var(--ink2);text-align:center;padding:1rem;opacity:.28;line-height:1.3;pointer-events:none;}
+.piov{position:absolute;inset:0;background:rgba(253,248,242,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;padding:1rem;text-align:center;border-radius:10px;}
+.pi:hover .piov{opacity:1;}
+.picat{font-family:var(--fh);font-size:.75rem;font-weight:600;color:var(--red);margin-bottom:3px;}
+.pitit{font-family:var(--fd);font-size:.95rem;font-style:italic;color:var(--ink);}
+.tape{position:absolute;z-index:5;pointer-events:none;width:44px;height:14px;border-radius:2px;opacity:.72;}
+.tp{top:-5px;left:50%;transform:translateX(-50%);}
+.tl{top:-4px;left:12px;transform:rotate(-9deg);}
+.tr{top:-4px;right:12px;transform:rotate(8deg);}
+.t-pk{background:rgba(242,196,206,.8);}
+.t-lv{background:rgba(212,197,232,.8);}
+.t-mn{background:rgba(197,224,212,.8);}
+.t-bt{background:rgba(245,228,168,.8);}
+
+/* PROCESS */
+#process{}
+.prc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;position:relative;margin-top:3.5rem;}
+.prc-steps::before{content:'';position:absolute;top:30px;left:8%;right:8%;height:1.5px;background:repeating-linear-gradient(90deg,var(--blush-d) 0,var(--blush-d) 8px,transparent 8px,transparent 16px);}
+.prc-c{background:var(--paper);border:1.5px solid rgba(180,150,120,.17);border-radius:16px;padding:2rem 1.4rem;text-align:center;position:relative;transition:all .4s cubic-bezier(.34,1.56,.64,1);}
+.prc-c:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(44,26,14,.09);}
+.prc-n{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1rem;font-style:italic;font-weight:500;margin:0 auto 1.1rem;position:relative;z-index:1;background:var(--paper2);border:2px solid rgba(180,150,120,.22);color:var(--ink);transition:all .4s;}
+.prc-c:hover .prc-n{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:rotate(5deg);}
+.prc-nm{font-family:var(--fd);font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:.5rem;}
+.prc-d{font-size:.8rem;font-weight:300;color:var(--ink3);line-height:1.75;}
+.prc-ico{font-size:1.4rem;margin-bottom:.7rem;display:block;}
+
+/* BOOKING */
+#booking{background:var(--paper2);}
+.bk-w{max-width:880px;margin:0 auto;padding:6rem 4rem;position:relative;z-index:1;}
+.bk-card{background:var(--paper);border:1.5px solid rgba(180,150,120,.18);border-radius:24px;padding:3.5rem;position:relative;box-shadow:0 8px 48px rgba(44,26,14,.06);}
+.bk-card::before{content:'';position:absolute;inset:8px;border:1px dashed rgba(180,150,120,.16);border-radius:18px;pointer-events:none;}
+.bk-hdr{text-align:center;margin-bottom:2.8rem;}
+.bk-stamp{display:inline-block;font-family:var(--fh);font-size:.95rem;font-weight:700;color:var(--red);border:2.5px solid var(--red);border-radius:5px;padding:3px 14px;letter-spacing:.1em;transform:rotate(-1.8deg);margin-bottom:1rem;}
+.bk-ttl{font-family:var(--fd);font-size:2rem;font-weight:400;color:var(--ink);margin-bottom:.4rem;}
+.bk-sub{font-size:.88rem;color:var(--ink3);}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem;}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:1.1rem;}
+.fg:last-child{margin-bottom:0;}
+.fl{font-family:var(--fh);font-size:.92rem;font-weight:600;color:var(--ink2);}
+.fc{background:var(--paper2);border:1.5px solid rgba(180,150,120,.22);border-radius:10px;padding:.78rem 1rem;font-family:var(--fb);font-size:.88rem;color:var(--ink);outline:none;transition:border-color .3s,box-shadow .3s;width:100%;appearance:none;}
+.fc:focus{border-color:var(--blush-d);box-shadow:0 0 0 3px rgba(242,196,206,.22);}
+.fc::placeholder{color:var(--ink3);opacity:.55;}
+.fta{resize:vertical;min-height:105px;}
+.svc-sel{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:5px;}
+.ssb{background:var(--paper2);border:1.5px solid rgba(180,150,120,.18);border-radius:10px;padding:.75rem .9rem;cursor:none;display:flex;align-items:center;gap:7px;transition:all .3s;text-align:left;}
+.ssb:hover,.ssb.on{border-color:var(--blush-d);background:var(--blush-p);}
+.ssb .si{font-size:1.1rem;}
+.ssb .sn{font-family:var(--fb);font-size:.76rem;font-weight:500;color:var(--ink2);}
+.fsub{width:100%;padding:1.05rem;background:var(--ink);color:white;border:none;border-radius:50px;font-family:var(--fh);font-size:1.15rem;font-weight:700;cursor:none;transition:all .4s cubic-bezier(.34,1.56,.64,1);margin-top:1.8rem;display:flex;align-items:center;justify-content:center;gap:7px;}
+.fsub:hover{background:var(--red);transform:translateY(-3px) scale(1.01);}
+.fnote{text-align:center;margin-top:1rem;font-family:var(--fh);font-size:.9rem;color:var(--ink3);}
+
+/* TESTIMONIALS */
+#testimonials{overflow:hidden;}
+.ts-w{max-width:1300px;margin:0 auto;padding:6rem 4rem 2rem;}
+.ts-out{overflow:hidden;margin:2.5rem -4rem;padding:1rem 0;}
+.ts-trk{display:flex;gap:1.4rem;animation:tsscroll 45s linear infinite;width:max-content;}
+.ts-trk:hover{animation-play-state:paused;}
+@keyframes tsscroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.tc{width:330px;flex-shrink:0;background:var(--paper);border:1.5px solid rgba(180,150,120,.16);border-radius:18px;padding:1.8rem;position:relative;box-shadow:2px 3px 14px rgba(44,26,14,.05);transition:transform .3s;}
+.tc:hover{transform:translateY(-4px) rotate(.5deg);}
+.tc-tag{position:absolute;top:-9px;right:14px;font-family:var(--fh);font-size:.73rem;font-weight:600;padding:2px 11px;border-radius:9px;transform:rotate(1.5deg);}
+.tt1{background:var(--blush);}
+.tt2{background:var(--lav);}
+.tt3{background:var(--mint);}
+.tt4{background:var(--butter);}
+.tc-stars{margin-bottom:.9rem;display:flex;gap:3px;}
+.tstar{width:11px;height:11px;background:var(--butter-d);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.tc-q{font-family:var(--fs);font-size:.9rem;font-style:italic;color:var(--ink2);line-height:1.8;margin-bottom:1.3rem;}
+.tc-auth{display:flex;align-items:center;gap:9px;}
+.tc-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:.75rem;font-style:italic;color:var(--ink);flex-shrink:0;}
+.av1{background:var(--blush-p);border:1px solid var(--blush);}
+.av2{background:var(--lav-p);border:1px solid var(--lav);}
+.av3{background:rgba(197,224,212,.38);border:1px solid var(--mint);}
+.av4{background:rgba(245,228,168,.38);border:1px solid var(--butter);}
+.tc-nm{font-family:var(--fb);font-size:.76rem;font-weight:500;color:var(--ink);}
+.tc-rl{font-family:var(--fh);font-size:.82rem;color:var(--ink3);}
+
+/* FOOTER */
+footer{position:relative;z-index:1;background:var(--ink);padding:4rem 4rem 2.5rem;}
+.ft-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.ft-logo{font-family:var(--fh);font-size:1.9rem;font-weight:700;color:var(--paper);display:block;margin-bottom:.7rem;}
+.ft-bio{font-size:.8rem;font-weight:300;color:rgba(253,248,242,.5);line-height:1.8;max-width:30ch;margin-bottom:1.4rem;}
+.ft-soc{display:flex;gap:9px;}
+.fsc{width:34px;height:34px;border-radius:50%;border:1px solid rgba(253,248,242,.18);display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:500;letter-spacing:.05em;color:rgba(253,248,242,.65);text-decoration:none;transition:all .3s;}
+.fsc:hover{background:var(--blush);color:var(--ink);border-color:var(--blush);}
+.ft-ct{font-family:var(--fh);font-size:.95rem;font-weight:600;color:var(--paper);margin-bottom:1.1rem;}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.ft-col a{font-size:.78rem;font-weight:300;color:rgba(253,248,242,.45);text-decoration:none;transition:color .3s;}
+.ft-col a:hover{color:var(--blush);}
+.ft-btm{max-width:1200px;margin:0 auto;border-top:1px solid rgba(253,248,242,.07);padding-top:1.4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.ft-cp{font-size:.67rem;color:rgba(253,248,242,.28);letter-spacing:.05em;}
+.ft-ht{font-family:var(--fh);font-size:.88rem;color:var(--blush);}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;}
+.rev.in{opacity:1;transform:translateY(0);}
+.rev-l{opacity:0;transform:translateX(-22px);transition:opacity .7s,transform .7s;}
+.rev-l.in{opacity:1;transform:translateX(0);}
+.rev-r{opacity:0;transform:translateX(22px);transition:opacity .7s,transform .7s;}
+.rev-r.in{opacity:1;transform:translateX(0);}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  #hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;gap:1.5rem;}
+  .abg{grid-template-columns:1fr;}
+  .svc-grid{grid-template-columns:1fr;}
+  .pb{grid-template-columns:1fr 1fr;}
+  .pi.s2{grid-column:span 1;}
+  .prc-steps{grid-template-columns:1fr 1fr;}
+  .prc-steps::before{display:none;}
+  .ft-in{grid-template-columns:1fr 1fr;}
+  .sw,.svc-wrap,.pf-w,.ts-w,.bk-w{padding:4rem 1.5rem;}
+  .bk-card{padding:2rem 1.5rem;}
+  .fr2{grid-template-columns:1fr;}
+  .afc{display:none;}
+  .svc-hdr{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="cdot" id="cdot"></div>
+<div class="cring" id="cring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">the tam touch<span>✦</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Kind Words</a></li>
+  </ul>
+  <a href="#booking" class="nav-book">Book Now ✦</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="blob b3"></div><div class="blob b4"></div>
+  <div class="flob fb1">✦</div><div class="flob fb2">✧</div>
+  <div class="flob fb3">🎀</div><div class="flob fb4">💋</div>
+  <div class="flob fb5">✨</div><div class="flob fb6">🤍</div>
+
+  <div class="hero-l">
+    <div class="hero-stix">
+      <span class="stix sx-pink">💍 Bridal</span>
+      <span class="stix sx-lav">📸 Editorial</span>
+      <span class="stix sx-mint">🎭 Fantasy</span>
+      <span class="washi">Bangalore · Worldwide 🌍</span>
+    </div>
+    <p class="hero-note">Your face is my canvas</p>
+    <h1 class="hero-h1">Where Beauty<br>Becomes<br><em>Pure Magic</em></h1>
+    <p class="hero-body">Bridal, editorial & fantasy makeup artistry by Tam — crafting transformations so stunning they feel like stepping straight into a fairytale.</p>
+    <div class="hero-ctas">
+      <a href="#booking" class="bpd">✦ Book Your Date</a>
+      <a href="#portfolio" class="bpo">See the Magic →</a>
+    </div>
+  </div>
+
+  <div class="hero-r">
+    <div class="cb" style="transform:rotate(1.5deg)">
+      <div class="cb-clip"></div>
+      <div class="cb-img" style="background:linear-gradient(135deg,#F2C4CE,#D4C5E8,#C5E0D4);aspect-ratio:4/3;">
+        <div class="cb-lbl">✨ Bridal Look<br><span style="font-size:.7rem;opacity:.5">add your photo here</span></div>
+      </div>
+      <div class="cb-cap">The Bridal Saga 💕</div>
+    </div>
+    <div class="mini2">
+      <div class="cb" style="transform:rotate(-2.2deg)">
+        <div class="cb-clip"></div>
+        <div class="cb-img" style="background:linear-gradient(135deg,#D4C5E8,#F2C4CE);aspect-ratio:1/1;">
+          <div class="cb-lbl" style="font-size:.8rem">🎭 Fantasy</div>
+        </div>
+        <div class="cb-cap">Fantasy Realm</div>
+      </div>
+      <div class="cb" style="transform:rotate(2.5deg)">
+        <div class="cb-clip"></div>
+        <div class="cb-img" style="background:linear-gradient(135deg,#C5E0D4,#F5E4A8);aspect-ratio:1/1;">
+          <div class="cb-lbl" style="font-size:.8rem">💄 Editorial</div>
+        </div>
+        <div class="cb-cap">Editorial Magic</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap" style="position:relative;z-index:1;">
+  <div class="mq-track">
+    <span class="mq-item"><div class="mq-gem"></div>Bridal Makeup Artist</span>
+    <span class="mq-item"><div class="mq-gem"></div>Fantasy & SFX</span>
+    <span class="mq-item"><div class="mq-gem"></div>Editorial Looks</span>
+    <span class="mq-item"><div class="mq-gem"></div>Bangalore Based</span>
+    <span class="mq-item"><div class="mq-gem"></div>Travels Worldwide</span>
+    <span class="mq-item"><div class="mq-gem"></div>Your Face. My Canvas.</span>
+    <span class="mq-item"><div class="mq-gem"></div>Pure Magic ✦</span>
+    <span class="mq-item"><div class="mq-gem"></div>Bridal Makeup Artist</span>
+    <span class="mq-item"><div class="mq-gem"></div>Fantasy & SFX</span>
+    <span class="mq-item"><div class="mq-gem"></div>Editorial Looks</span>
+    <span class="mq-item"><div class="mq-gem"></div>Bangalore Based</span>
+    <span class="mq-item"><div class="mq-gem"></div>Travels Worldwide</span>
+    <span class="mq-item"><div class="mq-gem"></div>Your Face. My Canvas.</span>
+    <span class="mq-item"><div class="mq-gem"></div>Pure Magic ✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="pl"></div>
+  <div class="sw">
+    <div class="abg">
+      <div class="aph rev-l">
+        <div class="amph">
+          <div class="pph">✨<br>Tam's Portrait<br><span style="font-size:.75rem;opacity:.45">Replace with your photo</span></div>
+        </div>
+        <div class="afc afc1">📍 Bangalore · worldwide ✈️</div>
+        <div class="afc afc2"><div class="bn">5+</div><div class="bl">years of magic</div></div>
+      </div>
+      <div class="rev-r">
+        <span class="stag">The Artist</span>
+        <h2 class="sh">Hi, I'm <em>Tam</em> ✦</h2>
+        <blockquote class="abq">"From real brides to fantasy realms — every face I touch becomes a story worth telling."</blockquote>
+        <p class="ab">I'm a Bangalore-based makeup artist who lives at the intersection of beauty, artistry, and storytelling. With a love for all things dreamy, bold, and transformative — I create looks that feel deeply personal and utterly unforgettable.</p>
+        <p class="ab" style="margin-top:-.5rem;">Whether you're walking down the aisle, stepping in front of a lens, or becoming something entirely otherworldly — I'm here to make the magic happen.</p>
+        <div class="atags">
+          <span class="atag">💍 Bridal Specialist</span>
+          <span class="atag">✨ Fantasy MUA</span>
+          <span class="atag">📸 Editorial</span>
+          <span class="atag">🎭 SFX & Body Art</span>
+          <span class="atag">🌍 Destination Artist</span>
+        </div>
+        <div class="asr">
+          <div class="asts"><span class="sbn">200+</span><span class="ssn">Brides Glam'd</span></div>
+          <div class="asts"><span class="sbn">5yrs</span><span class="ssn">Creating Magic</span></div>
+          <div class="asts"><span class="sbn">∞</span><span class="ssn">Looks Created</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-wrap">
+    <div class="svc-hdr rev">
+      <div>
+        <span class="stag">What I Do</span>
+        <h2 class="sh">Services Crafted<br>for <em>Every Dream</em></h2>
+      </div>
+      <p class="ssub">Each look is a collaboration between your wildest vision and my artistry. No two faces. No two looks. Ever.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="sc br rev">
+        <div class="sc-nbg">01</div>
+        <div class="sc-ico">💍</div>
+        <h3 class="sc-name">Bridal Makeup</h3>
+        <p class="sc-wsp">"The most beautiful version of you."</p>
+        <p class="sc-desc">A full bespoke bridal experience — trial session, wedding day, every in-between event. Long-wear formulas and custom colour stories that photograph like a dream.</p>
+        <div class="sc-pills"><span class="sc-pill">Trial Included</span><span class="sc-pill">Destination Available</span><span class="sc-pill">Bridal Party</span></div>
+        <a href="#booking" class="sc-lnk">Book a Consult →</a>
+      </div>
+      <div class="sc ed rev">
+        <div class="sc-nbg">02</div>
+        <div class="sc-ico">📸</div>
+        <h3 class="sc-name">Editorial & Fantasy</h3>
+        <p class="sc-wsp">"High concept, zero limits."</p>
+        <p class="sc-desc">For the bold and avant-garde. Campaign shoots, magazine editorials, and surrealist artistry. If you can dream it, I can paint it on your face.</p>
+        <div class="sc-pills"><span class="sc-pill">Brand Collabs</span><span class="sc-pill">Film & TV</span><span class="sc-pill">Concept Shoots</span></div>
+        <a href="#booking" class="sc-lnk">Book a Consult →</a>
+      </div>
+      <div class="sc ev rev">
+        <div class="sc-nbg">03</div>
+        <div class="sc-ico">✨</div>
+        <h3 class="sc-name">Event & Party Glam</h3>
+        <p class="sc-wsp">"Walk in. Turn every head."</p>
+        <p class="sc-desc">Sangeets, receptions, cocktails, galas — from soft glam to full drama. You deserve to feel extraordinary every single time.</p>
+        <div class="sc-pills"><span class="sc-pill">Group Bookings</span><span class="sc-pill">On-Location</span><span class="sc-pill">All Occasions</span></div>
+        <a href="#booking" class="sc-lnk">Book a Consult →</a>
+      </div>
+      <div class="sc sf rev">
+        <div class="sc-nbg">04</div>
+        <div class="sc-ico">🎭</div>
+        <h3 class="sc-name">SFX & Body Paint</h3>
+        <p class="sc-wsp">"Art that lives and breathes."</p>
+        <p class="sc-desc">Special effects, prosthetics, creature work, and full-body artistry for film, theatre, and immersive experiences. The extraordinary, made wearable.</p>
+        <div class="sc-pills"><span class="sc-pill">Prosthetics</span><span class="sc-pill">Body Paint</span><span class="sc-pill">Character Work</span></div>
+        <a href="#booking" class="sc-lnk">Book a Consult →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="pf-w">
+    <div class="pf-top rev">
+      <div><span class="stag">The Work</span><h2 class="sh">A Scrapbook of<br><em>Pure Magic</em></h2></div>
+      <div></div>
+      <div class="pf-frow">
+        <button class="pf-btn on">All ✦</button>
+        <button class="pf-btn">Bridal 💍</button>
+        <button class="pf-btn">Fantasy 🌙</button>
+        <button class="pf-btn">SFX 🎭</button>
+      </div>
+    </div>
+    <div class="pb rev">
+      <div class="pi s2 r2">
+        <div class="tape t-pk tp"></div>
+        <div class="pifr">
+          <div class="piin" style="background:linear-gradient(145deg,#F2C4CE,#E8A0B0,#C4607A,#8B2252);">
+            <div class="pilbl">The Grand Bridal Saga</div>
+          </div>
+          <div class="piov"><span class="picat">Bridal</span><span class="pitit">The Grand Bridal Saga</span></div>
+        </div>
+      </div>
+      <div class="pi r2">
+        <div class="tape t-lv tp"></div>
+        <div class="pifr">
+          <div class="piin" style="background:linear-gradient(145deg,#D4C5E8,#B8A3D4,#9080C0);">
+            <div class="pilbl">Into the Enchanted Forest</div>
+          </div>
+          <div class="piov"><span class="picat">Fantasy</span><span class="pitit">Enchanted Forest</span></div>
+        </div>
+      </div>
+      <div class="pi">
+        <div class="tape t-mn tl"></div>
+        <div class="pifr">
+          <div class="piin" style="background:linear-gradient(145deg,#C5E0D4,#9ECAB5);">
+            <div class="pilbl">Celestial</div>
+          </div>
+          <div class="piov"><span class="picat">Editorial</span><span class="pitit">Celestial Bride</span></div>
+        </div>
+      </div>
+      <div class="pi">
+        <div class="tape t-bt tr"></div>
+        <div class="pifr">
+          <div class="piin" style="background:linear-gradient(145deg,#F5E4A8,#E8CC70);">
+            <div class="pilbl">Gilded & Regal</div>
+          </div>
+          <div class="piov"><span class="picat">Bridal</span><span class="pitit">Gilded & Regal</span></div>
+        </div>
+      </div>
+      <div class="pi s2">
+        <div class="tape t-pk tp"></div>
+        <div class="pifr">
+          <div class="piin" style="background:linear-gradient(145deg,#F5CEBA,#E89070,#D4C5E8);">
+            <div class="pilbl">Otherworldly · SFX Artistry</div>
+          </div>
+          <div class="piov"><span class="picat">SFX & Body Art</span><span class="pitit">Otherworldly Creature</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.8rem;" class="rev">
+      <a href="https://www.instagram.com/thetamtouch" target="_blank" class="bpo">✦ Full Portfolio on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="sw">
+    <div style="text-align:center;max-width:580px;margin:0 auto 0;" class="rev">
+      <span class="stag" style="justify-content:center;">The Journey</span>
+      <h2 class="sh">How the Magic <em>Unfolds</em></h2>
+      <p class="ssub" style="margin:0 auto;text-align:center;">A seamless, creative, and deeply personal process — from first hello to final look.</p>
+    </div>
+    <div class="prc-steps">
+      <div class="prc-c rev"><span class="prc-ico">✉️</span><div class="prc-n">I</div><h3 class="prc-nm">Connect</h3><p class="prc-d">Fill out the booking form and share your vision, event details, and any inspo you love.</p></div>
+      <div class="prc-c rev"><span class="prc-ico">☕</span><div class="prc-n">II</div><h3 class="prc-nm">Consult</h3><p class="prc-d">A personal one-on-one to align on your style, skin type, and every tiny beautiful detail.</p></div>
+      <div class="prc-c rev"><span class="prc-ico">🎨</span><div class="prc-n">III</div><h3 class="prc-nm">Create</h3><p class="prc-d">Trial run for brides. Pure creative collaboration for all. We refine until it's exactly right.</p></div>
+      <div class="prc-c rev"><span class="prc-ico">✨</span><div class="prc-n">IV</div><h3 class="prc-nm">Transform</h3><p class="prc-d">The big day arrives. I arrive. And pure magic happens — beautifully, confidently, unforgettably.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="bk-w">
+    <div class="bk-card rev">
+      <div class="bk-hdr">
+        <div class="bk-stamp">✦ Let's Create Magic ✦</div>
+        <h2 class="bk-ttl">Book Your Date</h2>
+        <p class="bk-sub">Tell me about your dream and I'll get back to you within 24 hours 💌</p>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label class="fl">Your Name ✦</label><input type="text" class="fc" placeholder="e.g. Priya Sharma"></div>
+        <div class="fg"><label class="fl">WhatsApp Number</label><input type="tel" class="fc" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label class="fl">Email Address</label><input type="email" class="fc" placeholder="your@email.com"></div>
+        <div class="fg"><label class="fl">Event Date</label><input type="date" class="fc"></div>
+      </div>
+      <div class="fg">
+        <label class="fl">Which service? 👇</label>
+        <div class="svc-sel">
+          <button class="ssb" onclick="this.classList.toggle('on')"><span class="si">💍</span><span class="sn">Bridal Makeup</span></button>
+          <button class="ssb" onclick="this.classList.toggle('on')"><span class="si">📸</span><span class="sn">Editorial & Fantasy</span></button>
+          <button class="ssb" onclick="this.classList.toggle('on')"><span class="si">✨</span><span class="sn">Event & Party Glam</span></button>
+          <button class="ssb" onclick="this.classList.toggle('on')"><span class="si">🎭</span><span class="sn">SFX & Body Paint</span></button>
+        </div>
+      </div>
+      <div class="fg"><label class="fl">Event Location</label><input type="text" class="fc" placeholder="Bangalore / Destination / Not sure yet"></div>
+      <div class="fg" style="margin-bottom:0"><label class="fl">Tell me about your vision ✨</label><textarea class="fc fta" placeholder="Describe your dream look, share references, tell me the vibe, the mood — the more you share, the more magical I can make it..."></textarea></div>
+      <button class="fsub" onclick="handleSub(this)">Send My Enquiry 💌</button>
+      <p class="fnote">✦ I personally reply to every enquiry within 24 hours ✦</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="ts-w">
+    <div style="text-align:center;" class="rev">
+      <span class="stag" style="justify-content:center;">Kind Words</span>
+      <h2 class="sh">Brides & Muses <em>Speak</em></h2>
+    </div>
+  </div>
+  <div class="ts-out">
+    <div class="ts-trk">
+      <div class="tc"><span class="tc-tag tt1">Bridal 💍</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"Tam is a genius. I actually cried happy tears when I saw myself. The look lasted all 14 hours and I've never felt more beautiful in my life."</p><div class="tc-auth"><div class="tc-av av1">AS</div><div><p class="tc-nm">Ananya S.</p><p class="tc-rl">Bangalore Bride, 2024</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt2">Editorial 📸</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"I asked for a full fantasy editorial and she exceeded every corner of my imagination. Every photographer on set was absolutely stunned."</p><div class="tc-auth"><div class="tc-av av2">MR</div><div><p class="tc-nm">Meera R.</p><p class="tc-rl">Editorial Client, 2024</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt3">SFX 🎭</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"The SFX prosthetics for our short film were extraordinary. Tam worked seamlessly under pressure — truly film-quality magic."</p><div class="tc-auth"><div class="tc-av av3">KP</div><div><p class="tc-nm">Kiran P.</p><p class="tc-rl">Film Director, 2024</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt4">Destination 🌍</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"From the trial to my wedding morning, Tam made me feel so calm, so seen, so incredibly beautiful. Her attention to detail is truly unmatched."</p><div class="tc-auth"><div class="tc-av av4">DV</div><div><p class="tc-nm">Deepika V.</p><p class="tc-rl">Destination Bride, 2023</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt1">Brand ✦</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"Tam's conceptual thinking and execution set her entirely apart. Working with her on our brand campaign was genuinely a creative force."</p><div class="tc-auth"><div class="tc-av av2">NJ</div><div><p class="tc-nm">Neha J.</p><p class="tc-rl">Creative Director, 2024</p></div></div></div>
+      <!-- duplicate for loop -->
+      <div class="tc"><span class="tc-tag tt1">Bridal 💍</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"Tam is a genius. I actually cried happy tears when I saw myself. The look lasted all 14 hours and I've never felt more beautiful in my life."</p><div class="tc-auth"><div class="tc-av av1">AS</div><div><p class="tc-nm">Ananya S.</p><p class="tc-rl">Bangalore Bride, 2024</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt2">Editorial 📸</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"I asked for a full fantasy editorial and she exceeded every corner of my imagination. Every photographer on set was absolutely stunned."</p><div class="tc-auth"><div class="tc-av av2">MR</div><div><p class="tc-nm">Meera R.</p><p class="tc-rl">Editorial Client, 2024</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt3">SFX 🎭</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"The SFX prosthetics for our short film were extraordinary. Tam worked seamlessly under pressure — truly film-quality magic."</p><div class="tc-auth"><div class="tc-av av3">KP</div><div><p class="tc-nm">Kiran P.</p><p class="tc-rl">Film Director, 2024</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt4">Destination 🌍</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"From the trial to my wedding morning, Tam made me feel so calm, so seen, so incredibly beautiful. Her attention to detail is truly unmatched."</p><div class="tc-auth"><div class="tc-av av4">DV</div><div><p class="tc-nm">Deepika V.</p><p class="tc-rl">Destination Bride, 2023</p></div></div></div>
+      <div class="tc"><span class="tc-tag tt1">Brand ✦</span><div class="tc-stars"><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div><div class="tstar"></div></div><p class="tc-q">"Tam's conceptual thinking and execution set her entirely apart. Working with her on our brand campaign was genuinely a creative force."</p><div class="tc-auth"><div class="tc-av av2">NJ</div><div><p class="tc-nm">Neha J.</p><p class="tc-rl">Creative Director, 2024</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div>
+      <span class="ft-logo">the tam touch ✦</span>
+      <p class="ft-bio">Bridal, editorial & fantasy makeup artistry. Based in Bangalore, available worldwide. Your face. My canvas. Pure magic.</p>
+      <div class="ft-soc">
+        <a href="https://www.instagram.com/thetamtouch" target="_blank" class="fsc">IG</a>
+        <a href="https://www.threads.net/@thetamtouch" target="_blank" class="fsc">Th</a>
+        <a href="mailto:thetamtouch@gmail.com" class="fsc">✉</a>
+      </div>
+    </div>
+    <div class="ft-col"><p class="ft-ct">Explore</p><ul><li><a href="#about">About Tam</a></li><li><a href="#services">Services</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#process">My Process</a></li></ul></div>
+    <div class="ft-col"><p class="ft-ct">Services</p><ul><li><a href="#booking">Bridal Makeup</a></li><li><a href="#booking">Editorial & Fantasy</a></li><li><a href="#booking">Event Glam</a></li><li><a href="#booking">SFX & Body Paint</a></li></ul></div>
+    <div class="ft-col"><p class="ft-ct">Connect</p><ul><li><a href="#booking">Book Now</a></li><li><a href="#testimonials">Kind Words</a></li><li><a href="https://www.instagram.com/thetamtouch" target="_blank">Instagram</a></li><li><a href="mailto:thetamtouch@gmail.com">Email Tam</a></li></ul></div>
+  </div>
+  <div class="ft-btm">
+    <span class="ft-cp">© 2025 The Tam Touch · Bangalore · Travels Worldwide</span>
+    <span class="ft-ht">Made with love & a lot of blush 💕</span>
+  </div>
+</footer>
+
+<script>
+// CURSOR
+const cd=document.getElementById('cdot'),cr=document.getElementById('cring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function t(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;cd.style.cssText=`left:${mx}px;top:${my}px`;cr.style.cssText=`left:${rx}px;top:${ry}px`;requestAnimationFrame(t);})();
+document.querySelectorAll('a,button,.sc,.pi,.cb').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cr.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>cr.classList.remove('hov'));
+});
+
+// SPARKLES ON CLICK
+const kf=`@keyframes sp{0%{opacity:1;transform:translate(0,0) scale(0);}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(1);}}`;
+document.head.appendChild(Object.assign(document.createElement('style'),{textContent:kf}));
+document.addEventListener('click',e=>{
+  const ch=['✦','✧','·','✨','♡','★','🌸'];
+  const cl=['#F2C4CE','#D4C5E8','#C5E0D4','#F5E4A8','#D94040','#E8A0B0'];
+  for(let i=0;i<10;i++){
+    const s=document.createElement('span');
+    const tx=(Math.random()-.5)*110,ty=(Math.random()-.5)*110-40;
+    s.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;pointer-events:none;z-index:9999;font-size:${.65+Math.random()*.6}rem;color:${cl[Math.floor(Math.random()*cl.length)]};animation:sp .65s ease-out forwards;--tx:${tx}px;--ty:${ty}px;`;
+    s.textContent=ch[Math.floor(Math.random()*ch.length)];
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),700);
+  }
+});
+
+// REVEAL
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>obs.observe(el));
+
+// PORTFOLIO FILTER
+document.querySelectorAll('.pf-btn').forEach(b=>{
+  b.addEventListener('click',()=>{document.querySelectorAll('.pf-btn').forEach(x=>x.classList.remove('on'));b.classList.add('on');});
+});
+
+// BOOKING SUBMIT
+function handleSub(btn){
+  btn.textContent='💌 Sent! I\'ll be in touch soon ✦';
+  btn.style.background='#9ECAB5';
+  setTimeout(()=>{btn.textContent='Send My Enquiry 💌';btn.style.background='';},4000);
+}
+
+// FLOATING PETALS
+const pf=`@keyframes pfall{0%{transform:translateY(0) rotate(0deg);opacity:0;}5%{opacity:.45;}90%{opacity:.15;}100%{transform:translateY(105vh) rotate(360deg);opacity:0;}}`;
+document.head.appendChild(Object.assign(document.createElement('style'),{textContent:pf}));
+const pch=['✦','·','✧','♡','🌸'];
+const pcl=['#F2C4CE','#D4C5E8','#C5E0D4','#F5E4A8','#E8A0B0'];
+setInterval(()=>{
+  if(Math.random()>.65){
+    const p=document.createElement('span');
+    p.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:-20px;pointer-events:none;z-index:1;font-size:${.45+Math.random()*.55}rem;color:${pcl[Math.floor(Math.random()*pcl.length)]};animation:pfall ${11+Math.random()*14}s linear forwards;`;
+    p.textContent=pch[Math.floor(Math.random()*pch.length)];
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),26000);
+  }
+},1400);
+</script>
+</body>
+</html>
